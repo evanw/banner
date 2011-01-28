@@ -1,0 +1,5 @@
+*.pyc
+.cache
+banner.xml
+banner.json
+banner.pickle
