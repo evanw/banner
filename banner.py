@@ -151,10 +151,16 @@ def _download_semester_helper(semester, start_url, path_template):
 
     # select the <option> that starts with the text in semester variable
     b.select_form(nr=0)
+    found = False
     for item in b.find_control(type='select').items:
         if item.get_labels()[0].text.startswith(semester):
             item.selected = True
+            found = True
             break
+    if not found:
+        print 'error: could not find semester "%s" on page %s' % (semester, start_url)
+        import sys
+        sys.exit()
     b.submit()
 
     # get the list of department codes
