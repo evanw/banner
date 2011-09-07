@@ -5,7 +5,7 @@ import pickle
 # using banner library
 ################################################################################
 
-semesters = ['Fall 2010', 'Spring 2011']
+semesters = ['Fall 2011', 'Spring 2011']
 
 def path_for_semester(semester):
     return '.cache/%s/courses.pickle' % semester
