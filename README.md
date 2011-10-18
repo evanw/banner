@@ -40,7 +40,7 @@ If you just want the data, copy and paste this into your Python interpreter:
     url = 'https://github.com/downloads/evanw/banner/banner.pickle'
     courses = pickle.loads(urllib.urlopen(url).read())
 
-This contains the course information for Fall 2010 and Spring 2011 and can also be downloaded as [XML](https://github.com/downloads/evanw/banner/banner.xml) or [JSON](https://github.com/downloads/evanw/banner/banner.json).
+This contains the course information for Fall 2011 and Spring 2012 and can also be downloaded as [XML](https://github.com/downloads/evanw/banner/banner.xml) or [JSON](https://github.com/downloads/evanw/banner/banner.json).
 
 ## Dependencies
 * Beautiful Soup: [http://www.crummy.com/software/BeautifulSoup/](http://www.crummy.com/software/BeautifulSoup/) (included)
@@ -51,9 +51,9 @@ This contains the course information for Fall 2010 and Spring 2011 and can also 
 Since downloading is such a time-consuming operation, downloading and parsing are done in two different steps:
 
     import banner
-    semester = 'Fall 2010'
+    semester = 'Fall 2011'
 
-    # download all pages for Fall 2010 into a folder named .cache
+    # download all pages for Fall 2011 into a folder named .cache
     banner.download_semester(semester)
 
     # scrape all the previously downloaded pages in the .cache folder
